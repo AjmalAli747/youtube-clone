@@ -11,6 +11,7 @@
     box-shadow: 5px 8px 8px -6px rgba(0,0,0,0.5);
     padding: 0 20px;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .logo{
@@ -60,6 +61,73 @@ form button i{
 }
 
 
+/* ******************** Card Section ******************************* */
+.card{
+    width: 96.50%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.card_row{
+    margin: 10px;
+    box-shadow: 5px 8px 8px -6px rgba(0,0,0,0.5);
+    height: 300px;
+}
+
+
+
+
+
+.card_row .youtube_images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.youtube_title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.youtube_flex_channel{
+    margin: 10px 0;
+}
+
+.youtube_flex_channel img{
+    width: 45.50px;
+    height: 45.50px;
+    border-radius: 100%;
+}
+
+.youtube_flex_channel h1{
+    font-size: 0.9rem;
+    padding:0 5px;
+}
+
+.youtube_title_top h1{
+    font-size: 14px;
+    margin: 5px 0 0 53px;
+    text-align: left;
+}
+
+
+@media screen and (max-width: 1100px){
+
+    .card{
+      
+        grid-template-columns: auto auto auto;
+    }
+
+    .card_row{
+        height: 320px;
+    }
+}
+
+
 @media screen and (max-width: 850px){
    
     .search_icon{
@@ -68,6 +136,15 @@ form button i{
 
     .search_icon form input{
         width: 400px;
+    }
+
+    .card{
+      
+        grid-template-columns: auto auto auto;
+    }
+
+    .card_row{
+        height: 330px;
     }
 }
 
@@ -81,6 +158,11 @@ form button i{
     
     .search_icon form input{
         width: 300px;
+    }
+
+    .card{
+      
+        grid-template-columns: auto auto auto;
     }
 }
 
@@ -121,6 +203,21 @@ form button i{
 }
 
 
+.card{
+      
+    grid-template-columns: auto auto;
+    justify-content: center;
+}
 
+.card_row{
+    height: 325px;
+}
 
+}
+
+@media screen and (max-width: 400px){
+    .card{
+      
+        grid-template-columns: auto;
+    }
 }
