@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+.container_search{
+    width: 100%;
+    height: 70px;
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 5px 8px 8px -6px rgba(0,0,0,0.5);
+    padding: 0 20px;
+    position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+    width: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo img{
+    height: 90px;
+    margin-top: -12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search_icon{
+    width: 600px;
+    margin: -12px auto 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.search_icon form input{
+    width: 500px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+::placeholder{
+    font-size: 1rem;
+    color: #6f6f6f99;
+    font-weight: 700;
+}
+
+.search_icon form button{
+    background-color: transparent;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+form button i{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu_icon{
+    margin-top: -12px;
+}
+
+
+@media screen and (max-width: 850px){
+   
+    .search_icon{
+        width: 100%;
+    }
+
+    .search_icon form input{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .container_search{
+ 
+        padding: 0 10px;
+    }
+
+   
+    
+    .search_icon form input{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 585px){
+    .container_search{
+  
+        grid-template-columns: auto;
+        height: auto;
+        padding-bottom: 11.50px;
+
+    }
+
+    .logo img{
+        margin-left: -15px;
+    }
+
+    .menu_icon{
+        position: absolute;
+        top: 23.50px;
+        right: 5.50px;
+    }
+
+    .container_search{
+        display: flex;
+    }
+
+ 
+
+    .search_icon form{
+        width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_icon form input{
+    width: 100%;
+}
+
+
+
+
 }
