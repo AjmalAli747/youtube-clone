@@ -9,7 +9,6 @@ const SerachBar = () => {
     const [search, setSearch] = useState("pawan");
     const [getData, setData] = useState([]);
     const API_KEY = "AIzaSyA8X9LoZNiMl1mp0RxjtwUaqyLAU-D4iv8";
-    const channelsLine = "https://www.googleapis.com/youtube/v3/channels?"
 
 
 const submitFormData = async  (e) => {
@@ -53,7 +52,7 @@ useEffect(() => {
         </div>
       </section>
 
-      <Card youtubeData={getData}/>
+      {/* <Card youtubeData={getData}/> */}
     </>
   );
 };
