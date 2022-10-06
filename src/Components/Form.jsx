@@ -22,7 +22,9 @@ const Form = () => {
 
   // firebase
   const db = getFirestore(app);
-  console.log(sendData);
+
+
+
 
   const submitDAta = async () => {
     if (userName === "") {
@@ -48,7 +50,7 @@ const Form = () => {
           User_File: userFile,
         });
 
-        console.log("Document written with ID: ", docRef);
+        console.log("Document written with ID:  ssssssssssssssssssssss", docRef);
       } catch (e) {
         console.error("Error adding document: ", e);
       }
@@ -74,6 +76,10 @@ const Form = () => {
       //   firebase end
     }
   };
+
+
+ 
+
   return (
     <>
       <Box

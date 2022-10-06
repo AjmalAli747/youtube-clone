@@ -5,9 +5,11 @@ import Logo from "../Images/YouTube-Logo.wine.svg";
 import Card from "./Card";
 import MenuList from "./MenuList";
 
-const SerachBar = () => {
+const SerachBar = (props) => {
+
     const [search, setSearch] = useState("pawan");
     const [getData, setData] = useState([]);
+   
     const API_KEY = "AIzaSyA8X9LoZNiMl1mp0RxjtwUaqyLAU-D4iv8";
 
 
@@ -22,6 +24,8 @@ const submitFormData = async  (e) => {
     
     
 }
+
+
 
 
 useEffect(() => {
@@ -47,7 +51,7 @@ useEffect(() => {
           </div>
 
           <div className="menu_icon">
-                <MenuList />
+                <MenuList sendDataName={props.getUserName}/>
           </div>
         </div>
       </section>

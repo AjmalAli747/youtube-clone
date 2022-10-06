@@ -11,9 +11,12 @@ import {
 } from "@mui/material";
 
 import { PersonAdd, Settings, Logout } from "@mui/icons-material";
+
 import "../App.css";
 
-const MenuList = () => {
+const MenuList = (props) => {
+  const {displayName,email} = props.sendDataName;
+  console.log("RESSSSSSSSSSSSSSSSSSSSSSS : ", displayName);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -38,7 +41,10 @@ const MenuList = () => {
               aria-haspopup="true"
               aria-expanded={open ? "true" : undefined}
             >
-              <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+              <Avatar sx={{ width: 32, height: 32 }}>
+
+                <img src="" alt="" />
+              </Avatar>
             </IconButton>
           </Tooltip>
         </Box>
@@ -78,10 +84,13 @@ const MenuList = () => {
           anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
         >
           <MenuItem>
-            <Avatar /> Profile
+          <Avatar /> {displayName}
           </MenuItem>
           <MenuItem>
-            <Avatar /> My account
+          <Avatar /> {email}
+          </MenuItem>
+          <MenuItem>
+            <Avatar /> My Account
           </MenuItem>
           <Divider />
           <MenuItem>
@@ -103,7 +112,7 @@ const MenuList = () => {
             Logout
           </MenuItem>
         </Menu>
-  
+
     </>
   );
 };
